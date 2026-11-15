@@ -25,7 +25,7 @@ def parse_doctor_dictation_with_gemini(transcript: str) -> PrescriptionCreateSch
             f"{transcript}"
         )
         response = client.models.generate_content(
-            model="gemini-2.5-flash",
+            model="gemini-3.8-flash",
             contents=prompt,
             config=types.GenerateContentConfig(
                 response_mime_type="application/json",
